@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlaceTower9001 : MonoBehaviour
@@ -18,6 +19,9 @@ public class PlaceTower9001 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (!manager.running)
+        return;
+      
       if (Input.GetMouseButtonDown(0))
       {
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
@@ -52,6 +56,7 @@ public class PlaceTower9001 : MonoBehaviour
     void PlaceTower(Vector3 position)
     {
       //Book keeping
-      Instantiate(Tower, position, Quaternion.identity, World.transform);
+      var t = Instantiate(Tower, position, Quaternion.identity, World.transform);
+      manager.towers.Add(t);
     }
 }

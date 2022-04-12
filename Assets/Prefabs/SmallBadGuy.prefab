@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 8830470595690722518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.125, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7471986796425167651}
@@ -340,8 +340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545e495266f6f8745aec4cf5c2b7610b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 8524588a69a4f3e40bb597b6221138f1, type: 3}
   route: {fileID: 0}
+  myPathThroughLife: []
   coinWorth: 10
   health: 100
-  speed: 20
+  speed: 80
   healthBar: {fileID: 3007171618602130558}
